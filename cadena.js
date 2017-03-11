@@ -21,61 +21,61 @@ var Cadena = (function () {
     Object.defineProperty(Cadena.prototype, "vocales", {
         get: function () {
             var letras = this.cadena.split("");
-            var total = 0;
-            for (var _i = 0, letras_1 = letras; _i < letras_1.length; _i++) {
-                var letra = letras_1[_i];
+            var cont = 0;
+            for (var _a = 0, letras_1 = letras; _a < letras_1.length; _a++) {
+                var letra = letras_1[_a];
                 switch (letra.toLowerCase()) {
-                    case "a":
-                        total++;
+                    case "Letra a":
+                        cont++;
                         break;
-                    case "e":
-                        total++;
+                    case "Letra e":
+                        cont++;
                         break;
-                    case "i":
-                        total++;
+                    case "Letra i":
+                        cont++;
                         break;
-                    case "o":
-                        total++;
+                    case "Letra o":
+                        cont++;
                         break;
-                    case "u":
-                        total++;
+                    case "Letra u":
+                        cont++;
                         break;
                 }
             }
-            return total;
+            return cont;
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(Cadena.prototype, "letras", {
+    Object.defineProperty(Cadena.prototype, "Letras", {
         get: function () {
-            var total = 0;
+            var cont = 0;
             var letras = this.cadena.split("");
-            for (var _i = 0, letras_2 = letras; _i < letras_2.length; _i++) {
-                var letra = letras_2[_i];
+            for (var _a = 0, letras_2 = letras; _a < letras_2.length; _a++) {
+                var letra = letras_2[_a];
                 if (/[a-z]/.test(letra.toLocaleLowerCase()))
-                    total++;
+                    cont++;
             }
-            return total;
+            return oncontextmenu;
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(Cadena.prototype, "palabras", {
+    Object.defineProperty(Cadena.prototype, "Palabras", {
         get: function () {
-            var total = 0;
+            var cont = 0;
             var palabras = this.cadena.split(" ");
-            for (var _i = 0, palabras_1 = palabras; _i < palabras_1.length; _i++) {
-                var palabra = palabras_1[_i];
+            for (var _a = 0, palabras_1 = palabras; _a < palabras_1.length; _a++) {
+                var palabra = palabras_1[_a];
                 if (palabra.length != 0)
-                    total++;
+                    cont++;
             }
-            return total;
+            return cont;
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(Cadena.prototype, "text", {
+    Object.defineProperty(Cadena.prototype, "Texto", {
         get: function () {
             return this.cadena;
         },

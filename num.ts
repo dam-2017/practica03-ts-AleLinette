@@ -1,4 +1,4 @@
-export class Numero{
+export class Num{
     numero : number;
 
     constructor(numero:number){

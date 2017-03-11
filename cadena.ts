@@ -16,42 +16,42 @@ export class Cadena{
     }
     get vocales():number{
         let letras : Array<string> = this.cadena.split("");
-        var total:number = 0;
+        var cont:number = 0;
         for(let letra of letras ){
          switch (letra.toLowerCase()) {
-             case "a": total++;
+             case "a": cont++;
                  break;
-             case "e": total++;
+             case "e": cont++;
                  break;
-             case "i": total++;
+             case "i": cont++;
                  break;
-             case "o": total++;
+             case "o": cont++;
                  break;
-             case "u": total++;
+             case "u": cont++;
                  break;
          }
         }
-        return total;
+        return cont;
     }
 
     get letras():number{
-        var total : number = 0;
+        var cont : number = 0;
         let letras : Array<string> = this.cadena.split("");
         for(let letra of letras){
             if(/[a-z]/.test(letra.toLocaleLowerCase()))
-            total++;
+            cont++;
         }
-        return total;
+        return cont;
     }
 
     get palabras():number{
-        var total:number=0;
+        var cont:number=0;
         let palabras : Array<string> = this.cadena.split(" ");
         for(let palabra of palabras){
             if(palabra.length!=0)
-                total++
+                cont++
         }
-        return total;
+        return cont;
     }
 
     get text():string{

@@ -1,16 +1,16 @@
 "use strict";
 exports.__esModule = true;
-var Numero = (function () {
-    function Numero(numero) {
+var Num = (function () {
+    function Num(numero) {
         this.numero = numero;
     }
-    Numero.prototype.sumar = function (numero) {
+    Num.prototype.sumar = function (numero) {
         return this.numero + numero;
     };
-    Numero.prototype.resta = function (numero) {
+    Num.prototype.resta = function (numero) {
         return this.numero - numero;
     };
-    Numero.prototype.factorial = function (numero) {
+    Num.prototype.factorial = function (numero) {
         if (numero < 0)
             return -1;
         else if (numero == 0)
@@ -18,7 +18,7 @@ var Numero = (function () {
         else
             return (numero * this.factorial(numero - 1));
     };
-    Object.defineProperty(Numero.prototype, "primo", {
+    Object.defineProperty(Num.prototype, "primo", {
         get: function () {
             var primo = false;
             for (var i = 1; i < this.numero; i++) {
@@ -34,13 +34,13 @@ var Numero = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(Numero.prototype, "valor", {
+    Object.defineProperty(Num.prototype, "valor", {
         get: function () {
             return this.numero;
         },
         enumerable: true,
         configurable: true
     });
-    return Numero;
+    return Num;
 }());
-exports.Numero = Numero;
+exports.Num = Num;
