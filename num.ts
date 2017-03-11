@@ -1,42 +1,32 @@
-export class Num{
-    numero : number;
+export class Operacion{
 
-    constructor(numero:number){
-        this.numero = numero;
+constructor(){
+
     }
 
-    public sumar(numero:number):number{  
-        return this.numero + numero;
+    public suma(num:number, num2:number):number{
+        return num+num2;
     }
 
-    public resta(numero:number):number{  
-        return this.numero - numero;
+    public resta(num:number, num2:number):number{
+        return num-num2;
     }
 
-    public factorial(numero:number):number{
-        if(numero<0)
-            return -1;
-        else
-            if(numero == 0 )
-                return 1;
-            else
-                return (numero * this.factorial(numero -1));
-    } 
-
-    get primo():boolean{
-        var primo = false;
-        for(let i= 1 ; i < this.numero;i++){
-            if(this.numero % i == 0 && i!=1 && i != this.numero){
-                primo= false;
-                break;
+    public primo(num:number):string{
+        var i=1;
+        while(i<num){
+            if(num % i==0 && i!=1){
+                return "No es primo"
             }
-            else    
-                primo= true;
+            i++;
         }
-        return primo;
-    }      
+        return "Es primo";
+}
 
-    get valor():number{
-        return this.numero;
-    }
+    public factorial(num:number):number{
+         if(num==0 )
+                return 1;
+        else
+                return (num*this.factorial(num -1));
+    }   
 }

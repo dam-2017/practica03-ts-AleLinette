@@ -1,19 +1,15 @@
 import {Cadena} from './cadena';
-import {Num } from './num';
+import {Operacion} from './num';
 
-let cadena : Cadena;
-let numero : Num;
-cadena = new Cadena(" ");
+let cadena = new Cadena("ana no on ana");
+console.log("Palabras: ",cadena.numeropalabra);
+console.log("Letras: ",cadena.numeroletra);
+console.log("Palindromo: ",cadena.palindromo);
+console.log ("__________________________")
 
-console.log("Cadena: ", cadena.text);
-console.log(" Palindromo: ", cadena.palindromo);
-console.log(" N. vocales: ",cadena.vocales);
-console.log(" N. palabras: ",cadena.palabras);
-console.log(" N. letras: ",cadena.letras);
+let opera = new Operacion();
 
-numero = new Num(7);
-console.log("Numero: ", numero.valor);
-console.log("Sumar 5", numero.sumar(5));
-console.log("Restar 5", numero.resta(10));
-console.log("Factorial: ",numero.factorial(numero.valor));
-console.log("Num. primo: ",numero.primo);
+console.log("Resultado de suma: "+opera.suma(2, 2));
+console.log("Resultado de resta: "+opera.resta(2, 1));
+console.log("El factorial es: "+opera.factorial(8));
+console.log("Primo: "+opera.primo(8));
